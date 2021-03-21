@@ -1,0 +1,81 @@
+-----------------------Repositories & packages ----------------------------
+the R packages are found in one of these big 3 reposirories :
+CRAN/GitHub/BioConductor
+				Exploring Packages ( to know which package you will need )  :
+ for CRAN : the topics of packages are  divided in 35 themes in CRAN Task Views 
+ there are also RDocumentation to search for any package in the 3 repositories ( it has two the themes brwoser )
+				 how to install a package :
+1-FOR CRAN :
+	Run these two commands in the R console:
+		to install one package : 'install.packages("ggplot2")'
+		or for multiple packages : 'install.packages.(c("ggplot2" , "devtools", "lme4"))'
+	PS ;  the c() represents a vector 
+	or in RStudio going to Tools->Install Packages 
+2-FOR Bioconductor :
+	Run these three commands :
+		source("https://bioconductor.org/biocLite.R") // to make the 'bioclite()' available which is used to instal bioconductor
+		bioclite() // install the bioconductor
+		bioclite("GenomicFeatures") // install a R package 
+3- FOR Github :
+	Run these commands :
+		install.packages("devtools") // install the package 'devtools' , the package which allows us to execute 'install_github' ( execute it once just to install the package in my machine )
+		library(devtools) // the library function is used to load the package installe dinto our code ( its equivalent to #include in C or import in Js ), so we are here importing the devtools package into our R code
+		install_github("author/package") // to install a specific repo
+		
+or in RStudio going to Tools->Install Packages 
+
+
+			How to load a Package :
+1- usning the library function 'library()'
+2- in the RStudio Interface going to the Bottom-right section-> Packages-> check the package i need to use 
+
+			To know which packages i have in my machine ( installed packages ) :
+Run 'library()'
+			Update package :
+to update all the packaes : Run 'update.packages()'
+to update a specific package you just need to reinstall it : 'install.packages("ggplot2")'
+or in RStudio interface : bottom-left section ->packages->update
+			To unload a package:
+Run : detach ( "package:ggplot2" , unload=TRUE)
+or in RStudio interface : bottom-left section ->packages->uncheck the package 
+			to remove ( unistall ) a package :
+Run remove.packages("ggplot2")
+or in RStudio interface : bottom-left section ->packages->click in the 'X' associated to  the package 
+			to get manual of use ( help ) of a specific package :
+run : help( package="ggplot2")
+or in RStudio interface : bottom-left section ->packages->click inthe name of the package
+			to get extended help in a specific package :
+run : "browseVignettes('ggplot2')" 
+
+
+----------------------R markdown -----------------------------
+the r markdown files can be stored in form of HTML/Word/Pdf
+we have to install first the rmarkdown package : install.packages("rmarkdown") 
+in the top of R documents we should have a header which describes our file : 
+---
+title : 
+author:
+date : 'Today'
+output :
+--- 
+
+'-'+space+'content'+2 spaces <=> list
+**content** <=> Bold
+*content* <=> italic
+[link]content <=> link
+`code` <=> content in form of code inline  
+```
+lines of codes <=> lines of codes in form of block
+```
+~~content~~ <=> strike through the content
+# content <=> title level 1
+## content <=> title level 2
+### content <=> title level 3
+
+
+
+
+
+
+
+		
