@@ -1,0 +1,36 @@
+---
+title: "1_FirstTest"
+author: "Metidji Sid Ahmed"
+date: "Today"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Title level 1
+## Title level 2
+### Title level 3
+
+**Bold**
+
+*Italic*
+
+# List
+
+- item1  
+- item2  
+- item3  
+
+~~strikethrough~~
+
+
+```
+print("hello world , first line")
+print("hello world , second line")
+
+```
+
+
+
